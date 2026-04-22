@@ -4,20 +4,35 @@
     font-family:Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     margin: 0;
+    scroll-behavior: smooth;
 }
 header {
-   
-  display: flex;
-  justify-content: space-between;
-  background: #E76C1F;
+
+  
 }
-header img {
+.first_head img {
         padding: 14px;
         height: 64px;
         box-shadow: 2px 4px 4px 0px #00000040;
-
-    
+        margin: 16px;
 }
+.first_head{
+    background: #E76C1F;
+    width: 1440px;
+    height: 128px;
+    display: flex;
+    justify-content: space-between;
+  
+}
+.hero_Photo{
+    width: 1440px;
+    height: 508px;
+    top: 59px;
+    object-fit: cover;
+
+   
+  
+    }
 .content_wrapper{
     gap: 2px;
     padding: 2px;
@@ -35,7 +50,7 @@ header img {
     width: 300px;
     flex-grow: 1;
     border: 2px solid var(--prime_red);
-    padding: 16px;
+    
 }
 .basket{
     width: 100%;
