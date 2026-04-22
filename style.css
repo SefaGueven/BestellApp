@@ -7,8 +7,7 @@
     scroll-behavior: smooth;
 }
 header {
-
-  
+  position: relative;
 }
 .first_head img {
         padding: 14px;
@@ -29,10 +28,37 @@ header {
     height: 508px;
     top: 59px;
     object-fit: cover;
+}
+section{
+    position: relative;
+}
+.title-section {
+  max-width: 1440px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title-picture {
+    position: absolute;
+    top: 432px;
+    left: 620px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 13px solid #FDEADC;
+    object-fit: cover;
 
-   
-  
-    }
+}
+
+
+
+
+
+
+
+
+
 .content_wrapper{
     gap: 2px;
     padding: 2px;
