@@ -6,8 +6,16 @@
     margin: 0;
     scroll-behavior: smooth;
 }
+:root {
+    --bg: #E76C1F;
+    /* --bg2:#fde9dc; */
+    --bg3: #353633;
+    --text: #323534;
+}
 header {
-  position: relative;
+  display: flex;
+  justify-content: space-between; /* Verteilt Logo links, Burger rechts */
+  max-width: 1440px; /* Begrenzt die Breite auf großen Bildschirmen */
 }
 .first_head img {
         padding: 14px;
@@ -16,7 +24,7 @@ header {
         margin: 16px;
 }
 .first_head{
-    background: #E76C1F;
+    background: var(--bg);
     width: 1440px;
     height: 128px;
     display: flex;
@@ -40,14 +48,15 @@ section{
   align-items: center;
 }
 .title-picture {
-    position: absolute;
-    top: 432px;
-    left: 620px;
+    position: relative;
+    /* top: 432px;
+    left: 620px; */
     width: 200px;
     height: 200px;
     border-radius: 50%;
     border: 13px solid #FDEADC;
     object-fit: cover;
+    bottom: 64px;
 
 }
 
