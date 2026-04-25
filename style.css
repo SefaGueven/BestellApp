@@ -1,16 +1,30 @@
 
 * {
-    color: antiquewhite;
-    font-family:Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     margin: 0;
     scroll-behavior: smooth;
+    
 }
 :root {
     --bg: #E76C1F;
-    /* --bg2:#fde9dc; */
+    --bg2:#fde9dc; 
     --bg3: #353633;
     --text: #323534;
+}
+@font-face {
+    font-family: 'Palanquin';
+    src: url(./assets/fonts/Palanquin/Palanquin-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'palanquin-dark';
+    src: url(./assets/fonts/Palanquin_Dark/PalanquinDark-SemiBold.ttf) format('truetype');
+    font-weight: bold;
+}
+body{
+   font-family:  'Palanquin';
 }
 header {
   display: flex;
@@ -37,6 +51,9 @@ header {
     top: 59px;
     object-fit: cover;
 }
+.main_content{
+        color: var(--text);
+}
 section{
     position: relative;
 }
@@ -49,21 +66,62 @@ section{
 }
 .title-picture {
     position: relative;
-    /* top: 432px;
-    left: 620px; */
     width: 200px;
     height: 200px;
     border-radius: 50%;
     border: 13px solid #FDEADC;
     object-fit: cover;
-    bottom: 64px;
+    margin-top:-128px;
 
 }
+.first_headline{
+ font-family: 'palanquin-dark';
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+       
+}
+.head_text{
+    color: var(--bg);
+}
+h1{
+    font-size: 40px;
+}
+.restaurant{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.restaurant p{
+    text-align: center;
+    font-size: 27px;
+}
 
+.rate_star{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-left: 10px;
+    padding: 5px;
+    background-color: var(--bg2);
+}
 
+.rate_star img {
+    width: 16px;
+    height: 16px;
+}
 
+.rate_odds {
+    font-weight: bold;
+}
 
-
+.reviewersqty {
+    color: #7f6a5e;
+    font-family: 'palanquin';
+}
 
 
 
