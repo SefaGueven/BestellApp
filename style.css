@@ -25,6 +25,7 @@
 }
 body{
    font-family:  'Palanquin';
+   margin: 0;
 }
 header {
   display: flex;
@@ -43,26 +44,36 @@ header {
     height: 128px;
     display: flex;
     justify-content: space-between;
-  
-}
-.hero_Photo{
-    width: 1440px;
-    height: 508px;
-    top: 59px;
-    object-fit: cover;
 }
 .main_content{
         color: var(--text);
+        max-width: 1440px;
+       
+       
 }
-section{
-    position: relative;
-}
+/* 1. Die Section auf 1440px begrenzen und zentrieren */
 .title-section {
-  max-width: 1440px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    max-width: 1440px;
+    width: 100%;       /* Nimmt den Platz ein, bis 1440px erreicht sind */
+    margin: 0 auto;    /* Zentriert die Section auf dem Bildschirm */
+    padding: 0;        /* WICHTIG: Entfernt Innenabstände, die das Bild vom Rand wegdrücken */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. Das div um das Bild muss sich ebenfalls voll ausdehnen */
+.title-section div {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. Das Bild füllt nun den kompletten Platz des divs aus */
+.hero_Photo {
+    width: 100%;
+    height: 508px;
+    object-fit: cover;
+    display: block;    /* Entfernt den winzigen Standard-Abstand unter Bildern */
 }
 .title-picture {
     position: relative;
