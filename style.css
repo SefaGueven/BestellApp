@@ -51,29 +51,29 @@ header {
        
        
 }
-/* 1. Die Section auf 1440px begrenzen und zentrieren */
+
 .title-section {
     max-width: 1440px;
-    width: 100%;       /* Nimmt den Platz ein, bis 1440px erreicht sind */
-    margin: 0 auto;    /* Zentriert die Section auf dem Bildschirm */
-    padding: 0;        /* WICHTIG: Entfernt Innenabstände, die das Bild vom Rand wegdrücken */
+    width: 100%;       
+    margin: 0 auto;    
+    padding: 0;       
     display: flex;
     flex-direction: column;
 }
 
-/* 2. Das div um das Bild muss sich ebenfalls voll ausdehnen */
+
 .title-section div {
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
-/* 3. Das Bild füllt nun den kompletten Platz des divs aus */
+
 .hero_Photo {
     width: 100%;
     height: 508px;
     object-fit: cover;
-    display: block;    /* Entfernt den winzigen Standard-Abstand unter Bildern */
+    display: block;    
 }
 .title-picture {
     position: relative;
@@ -133,11 +133,63 @@ h1{
     color: #7f6a5e;
     font-family: 'palanquin';
 }
+.menu-header {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    background-color: var(--bg);
+    height: 48px;
+}
+
+.menu-header img {
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
+}
+
+.menu-header h2 {
+    font-size: 36px;
+    font-weight: bolder;
+    color: white;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.menu-items {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-item {
+    background-color: var(--bg2);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    max-height: 240px;
+    gap: 12px;
+}
+
+.menu-item-image {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item-image img {
+    height: 180px;
+    width: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
 
 
 
 
-.content_wrapper{
+/* .content_wrapper{
     gap: 2px;
     padding: 2px;
     display: flex;
@@ -170,4 +222,4 @@ h1{
     width: 100%;
     background-color: #124658;
 }
-
+ */
