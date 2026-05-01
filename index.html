@@ -59,17 +59,33 @@
                 <nav class="menu-items" id="menuSalad">
                 </nav>
             </section>
-            <section class="order-section" id="orderSection"></section>
-        </div>
+           <section class="order-section" id="orderSection">
+                <button class="close-cart-button" onclick="toggleMobileCart(event)">X</button>
 
-            <!-- <div class="content_wrapper">
-            <section class="content">
-                <div class="test_content"></div>
+                <h2 class="order-title">Your Order</h2>
+                <div class="order-items" id="orderItems">
+            <div style="text-align: center; padding: 30px 10px; color: var(--bg2);">
+                <img src="assets/Logo/basket-icon.png" style="width: 40px; opacity: 0.5; margin-bottom: 10px; filter: invert(1);">
+                <p style="font-size: 16px; opacity: 0.7;">Your cart is empty.</p>
+                <p style="font-size: 16px; opacity: 0.7;">Choose delicious dishes from the menu!</p>
+            </div>
+        </div>
+                <div class="order-total">
+                    <span>Total:</span>
+                    <span id="orderTotal">0.00 €</span>
+                </div>
+                <button class="buy-now" onclick="showOrderConfirmation()" disabled="">Buy Now</button>
             </section>
-            <section class="basket_wrapper">
-                <div class="basket"></div>
-        </section>
-        </div> -->
+        </div>     
+    <dialog class="order-confirmation" id="orderConfirmation" onclick="closeOnBackdrop(event)">
+            <form method="dialog">
+                <img src="./assets/icon/confirmation.png" alt="order confirmation">
+                <h2>Order Confirmed!</h2>
+                <p>Your food is on its way!</p>
+                <button><img src="assets/Logo/close.png" alt="Schließen"></button>
+            </form>
+        </dialog>
+</section>                  <!--content wrapper end-->
     </main>
     <footer>
         <div class="footer-content">

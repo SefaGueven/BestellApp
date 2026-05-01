@@ -193,10 +193,20 @@ footer {
     padding: 20px 0;
     margin-top: 20px;
 }
+.order-section {
+    width: 440px;
+    height: fit-content;
+    max-height: 80vh;
+    position: sticky;
+    top: 20px;
+    padding: 25px;
+    background-color: var(--bg3);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
 
-
-
-/* .content_wrapper{
+ .content_wrapper{
     gap: 2px;
     padding: 2px;
     display: flex;
@@ -204,6 +214,7 @@ footer {
     flex-grow: 1;
     background-color: var(--bg_darkblue_light);
 }
+/*
 .content{
     padding: 16px;
     width: calc(100% - 316px);
