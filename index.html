@@ -60,6 +60,7 @@
                 </nav>
             </section>
            <section class="order-section" id="orderSection">
+
                 <h2 class="order-title">Your Order</h2>
                 <div class="order-items" id="orderItems">
            
@@ -72,13 +73,13 @@
             </section>
         </div>     
     <dialog class="order-confirmation" id="orderConfirmation" onclick="closeOnBackdrop(event)">
-            <form method="dialog">
-                <img src="./assets/icon/confirmation.png" alt="order confirmation">
-                <h2>Order Confirmed!</h2>
-                <p>Your food is on its way!</p>
-                <button><img src="assets/Logo/close.png" alt="Schließen"></button>
-            </form>
-        </dialog>
+    <form method="dialog">
+        <button class="close-btn"><img src="assets/Logo/close.png" alt="Schließen"></button>
+        <img class="delivery-car" src="assets/Logo/delivery_car.png" alt="order confirmation">
+        <h2>Order Confirmed!</h2>
+        <p>Your food is on its way!</p>
+    </form>
+</dialog>
 </section>                  <!--content wrapper end-->
     </main>
     <footer>

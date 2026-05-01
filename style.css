@@ -200,10 +200,17 @@ footer {
     position: sticky;
     top: 20px;
     padding: 25px;
-    background-color: var(--bg3);
+    background-color: var(--bg);
     border-radius: 12px;
     display: flex;
     flex-direction: column;
+}
+.order-section .buy-now {
+    margin-top: 15px;
+    width: 100%;
+    padding: 18px;
+    font-size: 18px;
+    font-weight: bold;
 }
 .order-title {
     display: flex;
@@ -224,6 +231,9 @@ footer {
     overflow-y: auto;
     padding-right: 10px;
 }
+.price {
+    font-weight: bold;
+}
 .order-item {
     background-color: var(--bg2);
     padding: 15px;
@@ -235,6 +245,58 @@ footer {
     grid-template-rows: auto auto;
     gap: 10px;
     align-items: center;
+}
+.menu-item-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px;
+    width: 100%;
+}
+.add-to-cart {
+    background-color: var(--bg);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.amount-controls button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--bg);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s ease-in-out;
+}
+
+.amount-controls span {
+    font-size: 16px;
+    font-weight: bold;
+    width: 20px;
+    text-align: center;
+}
+.order-item-name {
+    font-weight: bold;
+    grid-column: 1 / 3;
+    font-size: 16px;
+}
+.order-item-price {
+    font-weight: bold;
+    color: var(--text);
+}
+.amount-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-self: end;
 }
  .content_wrapper{
     gap: 2px;
@@ -253,4 +315,47 @@ footer {
     padding-top: 15px;
     border-top: 2px solid var(--bg3);
     color: white;
+}
+.order-confirmation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 30px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--bg3);
+    color: white;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 90%;
+    font-size: larger;
+    font-family: 'Palanquin Dark', sans-serif;
+}
+.delivery-car {
+    width: 80px;
+    height: auto;
+}
+.order-confirmation button {
+    margin-top: 20px;
+    background-color: var(--bg);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    
+}
+.order-confirmation button.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    margin-top: 0;
+    padding: 5px;
+}
+.close-btn img {
+    width: 20px;
+    height: 20px;
 }
