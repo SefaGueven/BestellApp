@@ -136,7 +136,7 @@ h1{
 .menu-header {
     display: flex;
     align-items: center;
-    margin: 20px 0;
+    margin: 25px 0;
     background-color: var(--bg);
     height: 48px;
 }
@@ -186,6 +186,13 @@ h1{
     object-fit: cover;
 }
 
+footer {
+    background-color: var(--bg);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
 
 
 
