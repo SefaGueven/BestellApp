@@ -42,7 +42,7 @@ function templateOrderItem(item) {
 function templateWarningMessage() {
     return `
             <div style="text-align: center; padding: 30px 10px; color: var(--bg2);">
-                <img src="./assets/icon/basket-icon.svg" style="width: 40px; opacity: 0.5; margin-bottom: 10px; filter: invert(1);">
+                <img src="assets/Logo/basket-icon.png" style="width: 40px; opacity: 0.5; margin-bottom: 10px; filter: invert(1);">
                 <p style="font-size: 16px; opacity: 0.7;">Your cart is empty.</p>
                 <p style="font-size: 16px; opacity: 0.7;">Choose delicious dishes from the menu!</p>
             </div>
