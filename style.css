@@ -434,10 +434,12 @@ footer {
         font-size: 28px;
     }
 
-    .content-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
+    .content_wrapper {
+     width: 100%;
+    object-fit: cover;
+    display: block;
+}
+  
 
     .order-section {
         position: fixed;
