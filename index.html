@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="shortcut icon" href="assets/Logo/takeout_dining_2.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/Responsive.css" />
     <script src="script.js"></script>
     <script src="script/db.js"></script>
     <script src="script/template.js"></script>
@@ -44,23 +45,23 @@
                     <img src="assets/Logo/Menü/Burger_Logo.png" alt="Burger-Menu Logo">
                     <h2>Burger</h2>
                 </div>
-                <nav class="menu-items" id="menuBurger">
+                <nav class="menu-items " id="menuBurger">
                 </nav>
                 <div class="menu-header">
                     <img src="assets/Logo/Menü/Pizza_Logo.png" alt="Pizza Logo">
                     <h2>Pizza</h2>
                 </div>
-                <nav class="menu-items" id="menuPizza">
+                <nav class="menu-items description" id="menuPizza">
                 </nav>
                   <div class="menu-header">
                     <img src="assets/Logo/Menü/Salad-Logo.png" alt="Salat Logo">
                     <h2>Salad</h2>
                 </div>
-                <nav class="menu-items" id="menuSalad">
+                <nav class="menu-items " id="menuSalad">
                 </nav>
             </section>
            <section class="order-section" id="orderSection">
-
+           <button class="close-cart-button" onclick="toggleMobileCart(event)">X</button>
                 <h2 class="order-title">Your Order</h2>
                 <div class="order-items" id="orderItems">
            
@@ -87,5 +88,14 @@
             <p>© 2023 BurgerHouse. All rights reserved.</p>
         </div>
     </footer>
+    <nav class="footer-nav">
+            <a href="#siteHeader"><img src="assets/Logo/home.png" alt="home"></a>
+            <a href="#"><img src="assets/Logo/person.png" alt="profile"></a>
+            <a href="#"><img src="assets/Logo/takeout_dining_2.png" alt="App"></a>
+            <a href="#" class="cart-nav-link" onclick="toggleMobileCart(event)">
+                <img src="assets/Logo/shopping_cart.png" alt="Cart">
+                <span id="cartBadge" class="cart-badge">2</span>
+            </a>
+    </nav>
 </body>
 </html>
