@@ -23,7 +23,15 @@
     src: url(./assets/fonts/Palanquin_Dark/PalanquinDark-SemiBold.ttf) format('truetype');
     font-weight: bold;
 }
-
+/* Scroll-Button */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+/* Hover-Effekt */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 body {
     font-family: 'Palanquin';
     margin: 0;
