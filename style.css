@@ -523,7 +523,10 @@ footer {
         z-index: 1000; 
         box-shadow: 0 -2px 10px rgba(0,0,0,0.5); 
     }
-    
+    .footer-nav img {
+        width: 24px;
+        height: 24px;       
+    }
     body {
         padding-bottom: 56px; 
     }
