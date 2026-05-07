@@ -2,26 +2,24 @@ let orderItems = [];
 
 function renderMenu() {
     for (let i = 0; i < menues.length; i++) {
-        const currentCategory = menues[i].category;
-        const dishesList = menues[i].dishes;
-
-        for (let dishIndex = 0; dishIndex < dishesList.length; dishIndex++) {
-            const dish = dishesList[dishIndex];   
-            switch (currentCategory) {
-                case 'burger':
-                document.getElementById("menuBurger").innerHTML += templateMenuItem(dish, 'burger', dishIndex);
-                break;
-
-            case 'pizza':
-                document.getElementById("menuPizza").innerHTML += templateMenuItem(dish, 'pizza', dishIndex);
-                break;
-
-            case 'salad':
-                document.getElementById("menuSalad").innerHTML += templateMenuItem(dish, 'salad', dishIndex);
-                break;
-            }
-        }
+        renderCategory(menues[i]);
     }
+}
+
+function renderCategory(menu) {
+    for (let i = 0; i < menu.dishes.length; i++) {
+        renderDish(menu.category, menu.dishes[i], i);
+    }
+}
+
+function renderDish(category, dish, index) {
+    const ids = {
+        burger: "menuBurger",
+        pizza: "menuPizza",
+        salad: "menuSalad"
+    };
+    document.getElementById(ids[category]).innerHTML +=
+        templateMenuItem(dish, category, index);
 }
 
 function addToOrder(category, index) {
@@ -31,7 +29,7 @@ function addToOrder(category, index) {
         price: item.price,
         amount: 1
     };
-        let existingItem = orderItems.find(orderItem => orderItem.name === menuToAdd.name);
+    let existingItem = orderItems.find(orderItem => orderItem.name === menuToAdd.name);
 
     if (existingItem) {
         existingItem.amount++;       // Gericht schon drin → Menge +1
@@ -72,26 +70,23 @@ function renderOrder() {
 
     document.getElementById("orderTotal").innerText = totals.total.toFixed(2) + " €";
     updateCartBadge(totals.count);
-    
+
     let buyNowButton = document.querySelector(".buy-now");
     if (buyNowButton) {
         buyNowButton.disabled = (orderItems.length === 0);
     }
 }
 
-
 function changeItemQuantity(itemName, change) {
     let index = orderItems.findIndex(orderItem => orderItem.name === itemName);
 
     if (index !== -1) {
         orderItems[index].amount += change;
-    } 
+    }
     if (orderItems[index].amount < 1) {
         orderItems.splice(index, 1);
     }
-
     renderOrder();
-
 }
 
 function getDecreaseBtnContent(amount) {
@@ -128,7 +123,7 @@ function toggleMobileCart(event) {
     cart.classList.toggle("show-cart");
 }
 
-function closeOnBackdrop(event){
+function closeOnBackdrop(event) {
     if (event.target === event.currentTarget) {
         closeOrderConfirmation();
     }
