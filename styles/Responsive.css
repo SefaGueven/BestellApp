@@ -149,19 +149,35 @@
         flex-direction: column;
         align-items: center;
         margin-top: -53px;
-       
         }
         .menu-header img {
         width: 64px;
         height: 64px;
-   
-        
     }
         .menu-header h2 {
         font-size: 32px;
         margin-top: -12px;
-       
     }
+        .menu-item-image img {
+        width: 100%;
+        height: 86px;
+        border-radius: 8px ;
+    }
+    .menu-item-content {
+    padding: 0px;   
+}
+    .menu-item-title{
+        font-weight: 600;
+        font-size: 24px;
+    }
+    .description{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 120%;
+    }
+    .menu-item {
+    gap: 8px;
+}
     .title-section div {
         margin-top: 16px;
     }
@@ -184,5 +200,8 @@
     .menu_icon {
         display: none;
     }
+    .menu-item-price span {
+    margin-bottom: 0px;
+}
 
 }
