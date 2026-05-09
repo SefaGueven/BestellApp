@@ -1,93 +1,94 @@
-
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="shortcut icon" href="assets/Logo/takeout_dining_2.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/Logo/takeout_dining_2.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
 
     <script src="script.js"></script>
     <script src="script/db.js"></script>
     <script src="script/template.js"></script>
     <title>BestellApp</title>
-    
+
 </head>
+
 <body onload="renderMenu(); renderOrder()">
-    <header> 
-            <div class="first_head">
-            <a  href="index.html"><img src="assets/Logo/Logo 01.png" alt="BestellApp-Logo" /></a>
+    <header>
+        <div class="first_head">
+            <div class="header-logo">
+            <a href="index.html"><img src="assets/Logo/Logo 01.png" alt="BestellApp-Logo" /></a>
             <img class="menu_icon" src="assets/Logo/Menu.png" alt="menu">
             </div>
-            
+        </div>
+
     </header>
     <main class="main_content">
         <section class="title-section">
             <div>
-            <img class="hero_Photo" src="assets/IMG/hero_photo.jpg" alt="TitleBild">
+                <img class="hero_Photo" src="assets/IMG/hero_photo.jpg" alt="TitleBild">
             </div>
             <div class="restaurant">
-            <img class="title-picture" src="assets/Logo/Burger.png" alt="Burger Picture" >
-            <div class="first_headline">
-                <h1 > <span class="head_text">Burger</span> House </h1>
-                <span class="rate_star">
-                    <img src="assets/Logo/Star.png" alt="Star Logo">
-                    <span class="rate_odds">4,1</span>
-                    <span class="reviewersqty ">(317)</span>
-                </span>
-            </div>
-            <p>The best of Burgers, Pizza and Greens, all in one great place.</p>
+                <img class="title-picture" src="assets/Logo/Burger.png" alt="Burger Picture">
+                <div class="first_headline">
+                    <h1> <span class="head_text">Burger</span> House </h1>
+                    <span class="rate_star">
+                        <img src="assets/Logo/Star.png" alt="Star Logo">
+                        <span class="rate_odds">4,1</span>
+                        <span class="reviewersqty ">(317)</span>
+                    </span>
+                </div>
+                <p>The best of Burgers, Pizza and Greens, all in one great place.</p>
             </div>
         </section>
         <div class="content_wrapper">
-            <section class="menu-section">
-                <div class="menu-header">
-                    <div class="menu-header-inner">
+            <div class="menu-header">
+                <div class="menu-header-inner">
                     <img src="assets/Logo/Menü/Burger_Logo.png" alt="Burger-Menu Logo">
                     <h2>Burger</h2>
                 </div>
-                </div>
-                <nav class="menu-items " id="menuBurger">
-                </nav>
-                <div class="menu-header">
-                     <div class="menu-header-inner">
+            </div>
+            <nav class="menu-items " id="menuBurger"></nav>
+            <div class="menu-header">
+                <div class="menu-header-inner">
                     <img src="assets/Logo/Menü/Pizza_Logo.png" alt="Pizza Logo">
                     <h2>Pizza</h2>
                 </div>
-                </div>
-                <nav class="menu-items description" id="menuPizza">
-                </nav>
-                  <div class="menu-header">
-                     <div class="menu-header-inner">
+            </div>
+            <nav class="menu-items description" id="menuPizza">
+            </nav>
+            <div class="menu-header">
+                <div class="menu-header-inner">
                     <img src="assets/Logo/Menü/Salad-Logo.png" alt="Salat Logo">
                     <h2>Salad</h2>
                 </div>
-                </div>
-                <nav class="menu-items " id="menuSalad">
-                </nav>
-            </section>
-           <section class="order-section" id="orderSection">
-           <button class="close-cart-button" onclick="toggleMobileCart(event)">X</button>
+            </div>
+            <nav class="menu-items " id="menuSalad">
+            </nav>
+
+            <section class="order-section" id="orderSection">
+                <button class="close-cart-button" onclick="toggleMobileCart(event)">X</button>
                 <h2 class="order-title">Your Order</h2>
                 <div class="order-items" id="orderItems">
-           
-        </div>
+
+                </div>
                 <div class="order-total">
                     <span>Total:</span>
                     <span id="orderTotal">0.00 €</span>
                 </div>
                 <button class="buy-now" onclick="showOrderConfirmation()" disabled="">Buy Now</button>
             </section>
-        </div>     
-    <dialog class="order-confirmation" id="orderConfirmation" onclick="closeOnBackdrop(event)">
-    <form method="dialog">
-        <button class="close-btn"><img src="assets/Logo/close.png" alt="Schließen"></button>
-        <img class="delivery-car" src="assets/Logo/delivery_car.png" alt="order confirmation">
-        <h2>Order Confirmed!</h2>
-        <p>Your food is on its way!</p>
-    </form>
-</dialog>
-</section>                  <!--content wrapper end-->
+        </div>
+        <dialog class="order-confirmation" id="orderConfirmation" onclick="closeOnBackdrop(event)">
+            <form method="dialog">
+                <button class="close-btn"><img src="assets/Logo/close.png" alt="Schließen"></button>
+                <img class="delivery-car" src="assets/Logo/delivery_car.png" alt="order confirmation">
+                <h2>Order Confirmed!</h2>
+                <p>Your food is on its way!</p>
+            </form>
+        </dialog>
+        </section> 
     </main>
     <footer>
         <div class="footer-content">
@@ -95,16 +96,16 @@
         </div>
     </footer>
     <nav class="footer-nav">
-            <a href="#siteHeader"><img src="assets/Logo/home.png" alt="home"></a>
-            <a href="#"><img src="assets/Logo/person.png" alt="profile"></a>
-            <a href="#"><img src="assets/Logo/takeout_dining_2.png" alt="App"></a>
-            <a href="#" class="cart-nav-link" onclick="toggleMobileCart(event)">
-                <img src="assets/Logo/basket-icon.png" alt="Cart">
-                <span id="cartBadge" class="cart-badge">2</span>
-            </a>
+        <a href="#siteHeader"><img src="assets/Logo/home.png" alt="home"></a>
+        <a href="#"><img src="assets/Logo/person.png" alt="profile"></a>
+        <a href="#"><img src="assets/Logo/takeout_dining_2.png" alt="App"></a>
+        <a href="#" class="cart-nav-link" onclick="toggleMobileCart(event)">
+            <img src="assets/Logo/basket-icon.png" alt="Cart">
+            <span id="cartBadge" class="cart-badge">2</span>
+        </a>
     </nav>
 </body>
 <link rel="stylesheet" href="styles/menu.css" />
 <link rel="stylesheet" href="styles/Responsive.css" />
-  
+
 </html>

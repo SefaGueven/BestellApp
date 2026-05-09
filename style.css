@@ -10,7 +10,9 @@
     --bg3: #353633;
     --text: #323534;
 }
-
+body{
+    overflow-x: hidden;
+}
 @font-face {
     font-family: 'Palanquin';
     src: url(./assets/fonts/Palanquin/Palanquin-Regular.ttf) format('truetype');
@@ -38,13 +40,18 @@ body {
 }
 
 .first_head {
-    background: var(--bg);
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    background: var(--bg);
     padding: 10px 20px;
 }
-
+.header-logo{
+     display: flex;
+    justify-content: space-between; 
+    align-items: center;
+   width: 100%;
+    max-width: 1440px;
+}
 .first_head img {
     padding: 14px;
     height: 64px;
@@ -144,11 +151,12 @@ h1 {
 }
 
 .order-section {
-    width: 440px;
-    height: fit-content;
-    max-height: 80vh;
+     grid-column: 2;
+    grid-row: 2 / 7;
+    align-self: start; 
+    height: 435px;
     position: sticky;
-    top: 20px;
+    top: 5px;
     padding: 25px;
     background-color: var(--bg);
     border-radius: 12px;
@@ -209,7 +217,8 @@ h1 {
     padding: 8px 12px;
     border-radius: 32px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 16px; 
+     white-space: nowrap; /* keine zeilenumbrüche in Button */
 }
 
 .amount-controls button {
@@ -253,13 +262,20 @@ h1 {
 }
 
 .content_wrapper {
-    gap: 2px;
+    display: grid;
+    grid-template-columns: 1fr 440px;  /* Menu-Spalte | Order-Sidebar */
+    grid-template-rows: repeat(6, auto);
+     gap: 2px;
     padding: 2px;
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
     background-color: var(--bg_darkblue_light);
+    margin-top: 27px;
 }
+.content_wrapper > .menu-header:nth-child(1) { grid-row: 1; grid-column: 1 / -1; }
+.content_wrapper > #menuBurger               { grid-row: 2; grid-column: 1; }
+.content_wrapper > .menu-header:nth-child(3) { grid-row: 3; grid-column: 1 / -1; }
+.content_wrapper > #menuPizza                { grid-row: 4; grid-column: 1; }
+.content_wrapper > .menu-header:nth-child(5) { grid-row: 5; grid-column: 1 / -1; }
+.content_wrapper > #menuSalad                { grid-row: 6; grid-column: 1; }
 
 .order-total {
     display: flex;

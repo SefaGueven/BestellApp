@@ -1,21 +1,30 @@
 .menu-header {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 25px 0;
+    height: 60px;
     background-color: var(--bg);
-    height: 48px;
+    overflow: visible;
+    margin-bottom: 16px;
+    
+
 }
 .menu-header-inner {
     display: flex;
     align-items: center;
     width: 100%;
     max-width: 1440px; 
+ 
    
 }
 .menu-header img {
     width: 124px;
     height: 124px;
     margin: 0 20px;
+        position: relative;
+    top: -13px;
 }
 
 .menu-header h2 {
@@ -27,12 +36,10 @@
 }
 
 .menu-items {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 20px;
+    grid-column: 1;
+    margin-bottom: 32px;
 }
+
 
 .menu-item {
     background-color: var(--bg2);
