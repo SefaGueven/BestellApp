@@ -246,7 +246,7 @@
 
     .menu-item {
         gap: 8px;
-        margin-bottom: 16px;
+              margin: 16px 16px;
     }
 
     .first_headline {

@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     scroll-behavior: smooth;
-    
+
 }
 
 :root {
@@ -11,9 +11,11 @@
     --bg3: #353633;
     --text: #323534;
 }
+
 html {
-  font-size: clamp(14px, 1.2vw + 0.5rem, 18px);
+    font-size: clamp(14px, 1.2vw + 0.5rem, 18px);
 }
+
 body {
     overflow-x: hidden;
 }
@@ -260,7 +262,6 @@ h1 {
     gap: 12px;
     justify-self: end;
 }
-
 
 .order-total {
     display: flex;
