@@ -1,3 +1,11 @@
+@media (max-width: 1440px) {
+   .main_content {
+    padding: 0 0px;
+}
+.content_wrapper{
+    padding: 0 20px;
+}
+}
 @media (max-width: 992px) {
 
     .restaurant-logo {
@@ -20,7 +28,6 @@
         object-fit: cover;
         display: block;
     }
-
 
     .order-section {
         position: fixed;
@@ -139,45 +146,54 @@
     }
 
     .menu-header {
-         justify-content: center;
+        justify-content: center;
         margin: 25px 0;
         background-color: var(--bg);
         height: 64px;
     }
-        .menu-header-inner{
+
+    .menu-header-inner {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: -53px;
-        }
-        .menu-header img {
+    }
+
+    .menu-header img {
         width: 64px;
         height: 64px;
     }
-        .menu-header h2 {
+
+    .menu-header h2 {
         font-size: 32px;
         margin-top: -12px;
     }
-        .menu-item-image img {
+
+    .menu-item-image img {
         width: 100%;
         height: 86px;
-        border-radius: 8px ;
+        border-radius: 8px;
     }
+
     .menu-item-content {
-    padding: 0px;   
-}
-    .menu-item-title{
+        padding: 0px;
+    }
+
+    .menu-item-title {
         font-weight: 600;
         font-size: 24px;
     }
-    .description{
+
+    .description {
         font-size: 16px;
         font-weight: 500;
         line-height: 120%;
     }
+
     .menu-item {
-    gap: 8px;
-}
+        gap: 8px;
+    }
+
     .title-section div {
         margin-top: 16px;
     }
@@ -200,8 +216,9 @@
     .menu_icon {
         display: none;
     }
+
     .menu-item-price span {
-    margin-bottom: 0px;
-}
+        margin-bottom: 0px;
+    }
 
 }
