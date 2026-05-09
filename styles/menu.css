@@ -5,7 +5,13 @@
     background-color: var(--bg);
     height: 48px;
 }
-
+.menu-header-inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px; 
+   
+}
 .menu-header img {
     width: 124px;
     height: 124px;
