@@ -187,7 +187,6 @@
 
     .menu-header {
         justify-content: center;
-        margin: 25px 0;
         background-color: var(--bg);
         height: 64px;
     }
