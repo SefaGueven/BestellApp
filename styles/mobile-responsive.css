@@ -1,3 +1,14 @@
+@media (min-width: 3500px) {
+    body {
+        overflow-x: hidden;
+    }
+footer {
+    width: 100vw;
+}
+header {
+    width: 100vw;          
+}
+}
 @media (max-width: 1440px) {
     .main_content {
         padding: 0 0px;
@@ -112,7 +123,7 @@
         height: 200px;
         border-radius: 8px 8px 0 0;
     }
- 
+
     .menu-item-content {
         flex-direction: column;
         gap: 15px;
